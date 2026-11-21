@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="심리학 연구와 학회 일정을 한 화면에서 읽는 개인 연구 레이더" />
+  <title>Psych Scope — Psychology Research Radar</title>
+  <meta name="theme-color" content="#f4f0e7" />
+  <link rel="icon" type="image/svg+xml" href="psych-scope-tile.svg" />
+  <link rel="apple-touch-icon" href="psych-scope-tile.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="overrides.css" />
+  <link rel="stylesheet" href="iteration.css" />
+  <link rel="stylesheet" href="dark-mode.css" />
+  <link rel="stylesheet" href="card-layout.css" />
+  <link rel="stylesheet" href="refinement.css" />
+  <link rel="stylesheet" href="spacing.css" />
+  <link rel="stylesheet" href="live.css" />
+  <link rel="stylesheet" href="meta-align.css" />
+  <link rel="stylesheet" href="bookmark-export.css" />
+  <link rel="stylesheet" href="desktop-tuning.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#top"><span>PSYCH</span><em>SCOPE</em></a>
+    <p class="edition">WEEKLY RESEARCH DESK · 21 NOV 2026</p>
+    <div class="header-actions"><button class="mode-btn" id="modeButton" aria-label="다크 모드 전환">DARK</button><button class="saved-btn" id="savedButton" aria-label="저장한 글 보기">BOOKMARKS <span id="savedCount">0</span></button></div>
+  </header>
+
+  <main id="top">
+    <nav class="topics" aria-label="연구 분야 필터">
+      <a href="#updates">UPDATE</a>
+      <a href="#clinical">CLINICAL</a>
+      <a href="#non-clinical">NON-CLINICAL</a>
+      <a href="#conferences">CONFERENCES</a>
+    </nav>
+
+    <section class="reading-section" id="updates">
+      <div class="section-heading"><span>01</span><h2>오늘의 논문</h2></div>
+      <div id="updateList" class="paper-list"></div>
+    </section>
+
+    <section class="reading-section toned" id="clinical">
+      <div class="section-heading"><span>02</span><h2>임상분과</h2><p class="section-note inline" id="clinicalStatus">임상·정신병리</p></div>
+      <aside id="sleepRequest" class="request-note" hidden aria-label="수면 테마 편집 요청"><svg class="moon-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.1A9 9 0 0 1 8.9 3.5 9 9 0 1 0 20.5 15.1Z"/></svg><p><b>REQUESTED DIG · SLEEP MODE</b><small>매주 수요일 · 박성원 선생님 · 11.11—12.02</small></p><i>04 WEEKS</i></aside>
+      <div id="clinicalList" class="paper-list"></div>
+    </section>
+
+    <section class="reading-section" id="non-clinical">
+      <div class="section-heading"><span>03</span><h2>일반분과</h2><p class="section-note inline" id="nonClinicalStatus">사회·성격 · 산업·조직 · 인지 등 타분과 논문</p></div>
+      <aside id="socialRequest" class="request-note" hidden aria-label="소셜미디어 테마 편집 요청"><svg class="social-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 10h12c4 0 4 6 8 6h2"/><path d="M5 22h7c4 0 4-6 8-6h7"/><circle cx="5" cy="10" r="2"/><circle cx="27" cy="16" r="2"/><circle cx="5" cy="22" r="2"/></svg><p><b>REQUESTED DIG · SOCIAL FEED</b><small>매주 목요일 · 하정진 선생님 · 11.12—12.03</small></p><i>04 WEEKS</i></aside>
+      <div id="nonClinicalList" class="paper-list"></div>
+      <aside class="methods-note"><p class="eyebrow">METHOD NOTE</p><h3>개인평균 중심화: ‘평소의 나’와 ‘평소보다 오늘의 나’를 분리합니다.</h3><p>반복 측정값은 개인의 평균과 그 평균에서 벗어난 순간의 편차로 나뉩니다. 두 값을 함께 모형에 넣어야 ‘평소 스트레스가 높은 사람’과 ‘평소보다 더 스트레스 받은 날’의 효과를 구별할 수 있으며, 이를 섞은 계수는 어느 질문에도 명확히 답하지 못할 수 있습니다. <a href="https://doi.org/10.1037/met0000030" rel="noreferrer">Wang &amp; Maxwell, 2015</a></p></aside>
+    </section>
+
+    <section class="reading-section toned" id="conferences">
+      <div class="section-heading"><span>04</span><h2>학회 일정</h2><p class="section-note inline">공식 공고 기준</p></div>
+      <div class="timeline">
+        <article><time>12.01</time><div><b><a href="https://www.psychologicalscience.org/conventions/2027-aps-annual-convention/call-for-submissions">APS Annual Convention 2027</a></b><small>초록·포스터 제출 마감 · 미국, Seattle · 2027.05.27–30</small></div><span class="tag soon">ET 17:00</span></article>
+        <article><time>01.13</time><div><b><a href="https://convention.apa.org/proposals">APA Convention 2027</a></b><small>Division poster·proposal 마감 · 미국, San Francisco · 2027.08.12–14</small></div><span class="tag">ET 17:00</span></article>
+        <article><time>11.18</time><div><b><a href="https://www.abct.org/convention-ce/annual-conventions/">ABCT Convention 2027</a></b><small>포스터 제출 공고 대기 · 미국, New Orleans · 2027.11.18–21</small></div><span class="tag">공고 대기</span></article>
+      </div>
+    </section>
+
+    <section class="briefing" id="ai">
+      <div><p class="eyebrow">FOCUS</p><h2>AI와 심리학</h2></div>
+      <article class="focus-paper" data-area="AI·임상 · Psychological Medicine" data-title="Scalable Context-Sensitive Psychiatric Assessment With Large Language Models and Brief Diaries" data-desc="짧은 음성 일기에서 LLM이 정신병리 차원을 얼마나 타당하게 읽어낼 수 있는지 검증한 연구입니다." data-url="https://doi.org/10.1017/S0033291726105261"><span>임상</span><h3>LLM 기반 서술형 자료 평정</h3><p>짧은 음성 일기에서 LLM이 정신병리 차원을 얼마나 타당하게 읽어낼 수 있는지 검증한 연구입니다.</p><div class="focus-actions"><a href="https://doi.org/10.1017/S0033291726105261" rel="noreferrer">원문 보기 →</a><button class="focus-save" aria-label="저장">+</button></div></article>
+      <article class="focus-paper" data-area="AI·사회성격 · Perspectives on Psychological Science" data-title="Artificial Intelligence and the Psychology of Human Connection" data-desc="AI가 관계의 상대가 되거나 사람 사이를 매개할 때 생기는 신뢰와 친밀감의 변화를 정리합니다." data-url="https://doi.org/10.1177/17456916251404394"><span>사회·성격</span><h3>AI와 인간적 연결의 심리학</h3><p>AI가 관계의 상대가 되거나 사람 사이를 매개할 때 생기는 신뢰와 친밀감의 변화를 정리합니다.</p><div class="focus-actions"><a href="https://doi.org/10.1177/17456916251404394" rel="noreferrer">원문 보기 →</a><button class="focus-save" aria-label="저장">+</button></div></article>
+    </section>
+
+    <section class="sources" id="sources">
+      <p class="eyebrow">EDITORIAL FLOW</p>
+      <p>AI가 매일 06:00 KST에 저널 정보와 초록을 확인해 임상·일반분과에 각각 5편을 선별합니다. 요약은 초록 기반이며 본문 대조는 하지 않습니다. 현재 페이지는 프로토타입 페이지로 지속적인 변화가 있을 수 있으며, 발행인의 ChatGPT 유료구독이 끊긴 후에는 주소가 변경되거나 서비스가 종료될 수 있습니다.</p>
+    </section>
+  </main>
+  <aside class="bookmarks-panel" id="bookmarksPanel" aria-hidden="true"><div class="bookmarks-sheet"><div class="bookmarks-head"><p class="eyebrow">SAVED READING</p><button id="bookmarksClose" aria-label="닫기">×</button></div><h2>저장한 논문</h2><div class="export-actions" aria-label="저장 목록 내보내기"><button id="exportRis" type="button">RIS 내려받기</button><button id="exportBib" type="button">BibTeX 내려받기</button><button id="copyDois" type="button">DOI 복사</button></div><p class="export-note">Zotero·EndNote·Mendeley에는 RIS, LaTeX에는 BibTeX를 사용하세요.</p><div id="bookmarksList"></div></div></aside>
+  <footer><span>PSYCH SCOPE</span><span>NOT CLINICAL ADVICE · A PERSONAL RESEARCH READER</span><span>v0.2</span></footer>
+  <script src="app.js?v=53"></script>
+</body>
+</html>

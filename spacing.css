@@ -1,0 +1,13 @@
+/* shared vertical rhythm */
+.reading-section{padding-top:38px;padding-bottom:46px}
+.reading-section .section-heading{gap:5px;margin:0}
+.reading-section .section-heading .inline{margin:0}
+.reading-section .paper-list{margin-top:30px}
+.paper{padding:18px 0}
+.paper-meta{margin:0 0 5px}
+.paper h3{margin:0 0 6px}
+.paper p{margin:0}
+.briefing{padding-top:46px;padding-bottom:46px}
+.briefing article{padding-top:15px}
+.timeline{margin-top:30px}
+@media(max-width:760px){.reading-section{padding-top:34px;padding-bottom:42px}.reading-section .paper-list{margin-top:28px}.paper{padding:17px 0}.briefing{padding-top:40px;padding-bottom:40px}}

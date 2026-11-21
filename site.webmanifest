@@ -1,0 +1,9 @@
+{
+  "name": "Psych Scope",
+  "short_name": "Psych Scope",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f0e7",
+  "theme_color": "#f4f0e7",
+  "icons": [{"src":"psych-scope-tile.png","sizes":"512x512","type":"image/png"}]
+}
